@@ -1,0 +1,7 @@
+.cont1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #FCFEFF;
+    min-height: 100vh;
+}
