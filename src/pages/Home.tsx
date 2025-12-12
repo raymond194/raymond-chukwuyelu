@@ -7,7 +7,7 @@ import bluewave from '../assets/images/bluewave.png'
 import card1 from '../assets/images/card1.webp'
 import card2 from '../assets/images/card2.webp'
 import card3 from '../assets/images/card3.webp'
-
+import { HiOutlineMail } from "react-icons/hi";
 
 const Home = () => {
 
@@ -41,6 +41,12 @@ const Home = () => {
                         <p>I work across an extensive range of programming languages, development tools, and modern frameworks, and I am deeply committed to turning complex technical problems into polished, resilient, and highly scalable software solutions. Let’s build something remarkable together!</p>
 
                         {/* MESSAGE LINKEDIN BUTTON HERE */}
+                        <div className='mail-btns'>
+                     
+                            <a href='mailto:chukwuyeluraymond@gmail.com'>
+                                <HiOutlineMail className='mailBtn' size={22} />
+                            </a>
+                        </div>
                     </div>
                 </div>
 

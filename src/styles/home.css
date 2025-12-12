@@ -103,6 +103,18 @@
     line-height: 28px;
 }
 
+.mail-btns {
+    display: flex;
+}
+.mail-btns a{
+ width: 21px;
+    height: 21px;
+}
+.mailBtn {
+    color: black;
+    
+}
+
 .h1-right img {
     width: 100%;
     max-width: 420px;
