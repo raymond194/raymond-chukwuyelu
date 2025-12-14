@@ -51,12 +51,12 @@ const Home = () => {
                 </div>
 
                 <div className='h1-right fade-in right'>
-                    <img src={raymond} alt="Raymond Chukwuyelu" loading='eager'/>
+                    <img src={raymond} alt="Raymond Chukwuyelu" />
                 </div>
             </div>
 
             <div className='cont4'>
-                <img src={laptop} alt="Raymond Chukwuyelu" className='fade-in left' loading='eager'/>
+                <img src={laptop} alt="Raymond Chukwuyelu" className='fade-in left' />
 
                 <div className='fade-in right'>
                     <h1>SKILLS</h1>
@@ -137,6 +137,8 @@ const Home = () => {
             {/* EDUCATION */}
 
             {/* Certifications */}
+
+     
 
             <div className='cont6 fade-in left'>
                 <h1>Projects</h1>
