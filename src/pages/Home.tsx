@@ -2,13 +2,13 @@ import React, { useEffect } from 'react'
 import '../styles/home.css'
 import raymond from '../assets/images/raymond.jpg'
 import laptop from '../assets/images/laptop.jpg'
-import novatech from '../assets/images/novatech.png'
-import bluewave from '../assets/images/bluewave.png'
-import card1 from '../assets/images/card1.webp'
-import card2 from '../assets/images/card2.webp'
+import panlet from '../assets/images/panlet.png'
+import diagnoxa from '../assets/images/diagnoxa.png'
+import card2 from '../assets/images/konga.png'
 import card3 from '../assets/images/card3.webp'
 import { HiOutlineMail } from "react-icons/hi";
 import NeonBall from '../components/NeonBall'
+import card1 from '../assets/images/diagnoxaApp.png'
 
 const Home = () => {
 
@@ -44,7 +44,7 @@ const Home = () => {
 
                         {/* MESSAGE LINKEDIN BUTTON HERE */}
                         <div className='mail-btns'>
-                     
+
                             <a href='mailto:chukwuyeluraymond@gmail.com'>
                                 <HiOutlineMail className='mailBtn' size={22} />
                             </a>
@@ -79,25 +79,45 @@ const Home = () => {
                 <h1>Experience</h1>
 
                 <div className='exp-content1 fade-in left'>
-                    <img src={bluewave} alt='bluewave' />
+                    <img src={diagnoxa} alt='bluewave' />
 
                     <div>
-                        <span className='exp-title'>Senior fullstack developer</span>
-                        <span className='exp-header'>Bluewave</span>
-                        <span className='exp-header'>Dec 2023 - present</span>
-                        <span className='exp-header'>Bluewave - Georgia, United States </span>
+                        <span className='exp-title'>Frontend developer</span>
+                        <span className='exp-header'>Diagnoxa</span>
+                        <span className='exp-header'>Sep 2023 - Dec 2024 · 1 yr 2 mos</span>
+                        <span className='exp-header'>Diagnoxa - Lagos</span>
 
                         <ul>
-                            <li>Developed complex survey applications using ReactJS and Redux, enabling dynamic question flows, conditional branching, and real-time user interactions based on complex response patterns.
+                            <li>Developed data-intensive frontend systems using React and TypeScript,
+                                supporting complex workflows and large, frequently updated datasets.
                             </li>
 
-                            <li>Developed a real-time, interactive experience utilizing WebSocket, ensuring seamless data synchronization and immediate feedback across distributed users and systems.</li>
+                            <li>Architected reusable and accessible component systems, prioritizing
+                                data clarity, usability, and long-term maintainability.</li>
 
-                            <li>Managed and enhanced complex technology infrastructure, working closely with the product team to introduce new features and strategically outline future product developments.
+                            <li>Integrated frontend logic with secure, authenticated APIs, ensuring
+                                accurate and consistent data representation.
                             </li>
 
-                            <li>   Utilized AWS Cloud for scalable cloud computing solutions, managing and configuring virtual servers, storage, and other services as per project requirements.
+                            <li>  Optimized rendering performance through state management strategies,
+                                memoization, and controlled component updates.
+                            </li>
 
+                            <li>
+                                Implemented robust client-side validation, error handling, and loading
+                                states to improve reliability in sensitive user interactions.
+
+                            </li>
+
+                            <li>
+                                Contributed to maintaining high application stability through active
+                                participation in testing, debugging, and quality assurance processes.
+                            </li>
+
+                            <li>
+                                Partnered with product and design teams to translate complex health
+                                data into clear, user-focused interfaces while adhering to reliability
+                                standards.
                             </li>
                         </ul>
                     </div>
@@ -106,26 +126,51 @@ const Home = () => {
                 <hr className='hr' />
 
                 <div className='exp-content1 fade-in left'>
-                    <img src={novatech} alt='bluewave' />
+                    <img src={panlet} alt='bluewave' />
 
                     <div>
-                        <span className='exp-title'>Senior fullstack developer</span>
-                        <span className='exp-header'>Novatech</span>
-                        <span className='exp-header'>Jun 2021 - Oct 2023 · 2 yr 5 mos</span>
-                        <span className='exp-header'>Lagos, Lagos State, Nigeria · Hybrid
-                        </span>
+                        <span className='exp-title'>Frontend Developer</span>
+                        <span className='exp-header'>Panlet</span>
+                        <span className='exp-header'>April 2022 - Jul 2023 · 1 yr 3 mos</span>
+                        <span className='exp-header'>Panlet - Lagos</span>
 
                         <ul>
-                            <li>Developed complex survey applications using ReactJS and Redux, enabling dynamic question flows, conditional branching, and real-time user interactions based on complex response patterns.
+                            <li>Engineered and maintained a scalable React-based commerce
+                                application, working closely with backend services built on Node.js and
+                                MySQL.
                             </li>
 
-                            <li>Developed a real-time, interactive experience utilizing WebSocket, ensuring seamless data synchronization and immediate feedback across distributed users and systems.
+                            <li>Designed frontend architecture to support high-traffic user flows,
+                                including product browsing, checkout, and account management.
                             </li>
 
-                            <li>Developed a real-time, interactive experience utilizing WebSocket, ensuring seamless data synchronization and immediate feedback across distributed users and systems.
+                            <li>Improved runtime performance through lazy loading, pagination
+                                strategies, and component-level optimization, reducing initial load time
+                                and unnecessary re-renders.
                             </li>
 
-                            <li>  Built a library of modular, reusable components in ReactJS to handle advanced survey functionalities, including skip logic, multi-step forms, and dynamic question pathways, significantly improving survey flexibility and user completion rates.
+                            <li>  Implemented secure payment flows by integrating third-party services
+                                such as Stripe, ensuring reliability and transaction integrity.
+                            </li>
+
+                            <li>
+                                Optimized network performance by reducing payload sizes and enabling
+                                response compression (GZIP).
+                            </li>
+
+                            <li>
+                                Ensured consistent behavior across modern browsers and devices,
+                                maintaining a stable experience on both mobile and desktop.
+                            </li>
+
+                            <li>
+                                Delivered production-ready features through thorough testing,
+                                debugging, and release validation.
+                            </li>
+
+                            <li>
+                                Collaborated cross-functionally using Trello to plan, prioritize, and ship
+                                features efficiently.
                             </li>
 
                         </ul>
@@ -140,7 +185,7 @@ const Home = () => {
 
             {/* Certifications */}
 
-     
+
 
             <div className='cont6 fade-in left'>
                 <h1>Projects</h1>
@@ -161,8 +206,9 @@ const Home = () => {
 export default Home
 
 const cards = [
-    { id: 1, title: 'AIM admin dashboard', description: 'Admnin Dashboard', img: card1 },
-    { id: 2, title: 'WorkWave', description: 'Freelance', img: card2 },
-    { id: 3, title: 'Hayati', description: 'Health tech', img: card3 }
+    { id: 1, title: 'Diagnoxa', description: 'Health tech', img: card1 },
+    { id: 2, title: 'Hayati', description: 'Health tech', img: card3 },
+    { id: 3, title: 'Konga Clone', description: 'Freelance', img: card2 },
+
 
 ]

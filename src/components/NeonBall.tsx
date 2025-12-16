@@ -1,72 +1,68 @@
 import { useEffect, useRef, useState } from "react";
+import { FiMoon } from "react-icons/fi";
 import "../styles/NeonBall.css";
 
-export default function NeonBall() {
+const SIZE = 60;
+const OFFSET = 20;
+const DURATION = 4000; // 4s → slow & clean
+
+export default function NeonBallToDark() {
   const ballRef = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(true);
-  const [burst, setBurst] = useState(false);
 
-  const posRef = useRef({ x: window.innerWidth / 2, y: 50 });
-  const velRef = useRef({ x: 3, y: 3 });
-  const scrollYRef = useRef(0);
+  const [showBall, setShowBall] = useState(true);
+  const [showButton, setShowButton] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
-  const bounceCountRef = useRef(0);
-  const MAX_BOUNCES = 3; // ball bursts after 3 bounces
-
-  // Reset bounce count on scroll
   useEffect(() => {
-    const handleScroll = () => {
-      scrollYRef.current = window.scrollY;
-      bounceCountRef.current = 0; // reset bounces on scroll
-      if (window.scrollY >= 600) setVisible(false);
+    const startX = 0;
+    const startY = 0;
+
+    const endX = window.innerWidth - SIZE - OFFSET;
+    const endY = window.innerHeight - SIZE - OFFSET;
+
+    let startTime: number | null = null;
+
+    const animate = (time: number) => {
+      if (!ballRef.current) return;
+      if (!startTime) startTime = time;
+
+      const progress = Math.min((time - startTime) / DURATION, 1);
+
+      const x = startX + (endX - startX) * progress;
+      const y = startY + (endY - startY) * progress;
+
+      ballRef.current.style.transform = `translate(${x}px, ${y}px)`;
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        setShowBall(false);
+        setShowButton(true);
+      }
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    requestAnimationFrame(animate);
   }, []);
 
+  // Dark/light mode toggle
   useEffect(() => {
-    let animationFrame: number;
+    document.documentElement.classList.toggle("dark", isDark);
+    document.documentElement.classList.toggle("light", !isDark);
+  }, [isDark]);
 
-    const animate = () => {
-      if (!ballRef.current || burst) return; // stop moving if burst
+  return (
+    <>
+      {showBall && <div ref={ballRef} className="neon-ball" />}
 
-      let { x, y } = posRef.current;
-      let { x: vx, y: vy } = velRef.current;
+      {showButton && (
+        <button
+          className={`dark-btn ${isDark ? "dark" : "light"}`}
+          onClick={() => setIsDark(v => !v)}
+        >
+          <FiMoon />
+        </button>
+      )}
 
-      x += vx;
-      y += vy;
-
-      let bounced = false;
-
-      // bounce off edges
-      if (x < 0 || x > window.innerWidth - 50) {
-        velRef.current.x = -vx;
-        bounced = true;
-      }
-      if (y < 0 || y > window.innerHeight - 50) {
-        velRef.current.y = -vy;
-        bounced = true;
-      }
-
-      if (bounced) {
-        bounceCountRef.current += 1;
-        if (bounceCountRef.current >= MAX_BOUNCES) {
-          setBurst(true); // trigger burst
-          setTimeout(() => setVisible(false), 500); // CSS burst duration
-        }
-      }
-
-      posRef.current = { x, y };
-      ballRef.current.style.transform = `translate(${x}px, ${y + scrollYRef.current * 0.2}px)`;
-
-      animationFrame = requestAnimationFrame(animate);
-    };
-
-    animationFrame = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationFrame);
-  }, [burst]);
-
-  if (!visible) return null;
-
-  return <div ref={ballRef} className={`neon-ball ${burst ? "burst" : ""}`} />;
+    </>
+  );
 }

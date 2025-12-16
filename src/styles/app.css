@@ -5,3 +5,7 @@
     background-color: #FCFEFF;
     min-height: 100vh;
 }
+
+html.dark .cont1 {
+    background-color: #15161a;
+}
