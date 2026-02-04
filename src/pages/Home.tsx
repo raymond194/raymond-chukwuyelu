@@ -44,11 +44,16 @@ const Home = () => {
                     />
 
                     <div>
-                        <p>Hi, I’m Raymond Chukwuyelu — an enthusiastic and highly proficient Software Engineer.
-                            With substantial expertise in both client-side and server-side development, I specialize in crafting intuitive, innovative, and meticulously engineered digital solutions that are precisely tailored to the requirements of each client.
+                        <p>Hi, I’m Raymond Chukwuyelu — a passionate and detail-driven Frontend Engineer.
+                            I specialize in building intuitive, responsive, and accessible user interfaces that turn
+                            complex ideas into seamless digital experiences. With strong experience across
+                            modern frontend frameworks, state management, and UI systems, I focus on writing
+                            clean, scalable code that performs well and feels great to use.
+
                         </p>
 
-                        <p>I work across an extensive range of programming languages, development tools, and modern frameworks, and I am deeply committed to turning complex technical problems into polished, resilient, and highly scalable software solutions. Let’s build something remarkable together!</p>
+                        <p>I enjoy collaborating with teams, bridging design and engineering, and delivering
+                            products that users actually love. Let’s build something impactful. </p>
 
                         {/* MESSAGE LINKEDIN BUTTON HERE */}
                         <div className='mail-btns'>
@@ -71,12 +76,13 @@ const Home = () => {
                 <div className='fade-in right'>
                     <h1>SKILLS</h1>
                     <ul>
-                        <li>HTML5 / CSS3 / JavaScript (ES6+) / TypeScript / jQuery / Next-Js  / Zod</li>
-                        <li>React / Redux / Redux Toolkit  / Context API  /  Fetch API / ESLint</li>
-                        <li>Bootstrap / Tailwind CSS / Zustand / Render / Vercel</li>
-                        <li>Figma / Material-UI / Recharts / Tanstack-Query</li>
-                        <li>Git / Github / Gitlab / Vite / Lucide / Prettier</li>
-                        <li>Cypress / Jest / Responsive Design</li>
+                        <li>HTML5 / CSS3 / JavaScript / TypeScript / jQuery</li>
+                        <li>React / React Native / Next.js  / JavaScript (ES6+)</li>
+                        <li>Redux Toolkit / Zustand / TanStack Query</li>
+                        <li>Responsive & accessible UI design</li>
+                        <li>Tailwind CSS / Material UI</li>
+                        <li>Jest / Cypress / Zod</li>
+                        <li>Git / Vite </li>
                     </ul>
 
                 </div>
@@ -92,7 +98,7 @@ const Home = () => {
                     <div>
                         <span className='exp-title'>Frontend developer</span>
                         <span className='exp-header'>Diagnoxa</span>
-                        <span className='exp-desc'>Sep 2023 - Dec 2024 · 1 yr 2 mos</span>
+                        <span className='exp-desc'>Sep 2023 - Dec 2025 · 2 yr 3 mos</span>
                         <span className='exp-desc'>Diagnoxa - Lagos</span>
 
                         <ul>
